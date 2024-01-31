@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ContatoController;
+use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\SobreNosController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,20 +17,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 // qualquer um q entra no nosso site vai bater com essa rota e a view welcome
-Route::get('/', function () {
-    return "hello word";
-});
+Route::get('/', [PrincipalController::class,'principal']);
+// para cha,a um controller e depois sua função ele fica assim dentro de um "array", onde o primeiro paramentro e o controller e o segundo a função
 
 
-Route::get('/sobrenos', function () {
-    return "sobrenos";
-});
+Route::get('/sobrenos', [SobreNosController::class,'sobreNos']);
 
 
 
-Route::get('/contato', function () {
-    return "contato";
-});
+Route::get('/contato', [ContatoController::class,'contato'] );
 
 /*
 Na rotas via HTTP temos varios metodos eles são:
