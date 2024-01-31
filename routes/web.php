@@ -13,6 +13,38 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// qualquer um q entra no nosso site vai bater com essa rota e a view welcome
 Route::get('/', function () {
-    return view('welcome');
+    return "hello word";
 });
+
+
+Route::get('/sobrenos', function () {
+    return "sobrenos";
+});
+
+
+
+Route::get('/contato', function () {
+    return "contato";
+});
+
+/*
+Na rotas via HTTP temos varios metodos eles são:
+
+POST
+
+GET
+
+PUT
+
+DELETE
+
+PATCH
+
+OPTIONS
+
+Cada um deles e um metodo, mesmo q todos esteja na mesma rota mais com metodos diferentes podemos fazer com q cada um execute uma função diferente
+
+
+*/
