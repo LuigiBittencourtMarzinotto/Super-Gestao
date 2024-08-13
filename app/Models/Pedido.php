@@ -10,7 +10,6 @@ class Pedido extends Model
     use HasFactory;
     protected $fillable = ['cliente_id'];
     
-
     public static function rules()
     {
         return [
